@@ -1,0 +1,37 @@
+# Gambas Database Template File 3.0
+{ Table
+  Name="products"
+  PrimaryKey=["id"]
+  { Field
+    Name="id"
+    Type=db.Integer
+  }
+  { Field
+    Name="description"
+    Type=db.String
+  }
+  { Field
+    Name="name"
+    Type=db.String
+  }
+  { Field
+    Name="barcode"
+    Type=db.Float
+  }
+  { Field
+    Name="quantity"
+    Type=db.Float
+  }
+  { Field
+    Name="category"
+    Type=db.String
+  }
+  { Field
+    Name="notes"
+    Type=db.String
+  }
+  { Field
+    Name="image"
+    Type=db.Blob
+  }
+}

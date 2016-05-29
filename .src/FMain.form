@@ -1,0 +1,76 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,112,76)
+  { TabStrip1 TabStrip
+    MoveScaled(1,1,110,74)
+    AutoResize = True
+    Count = 4
+    Index = 0
+    Text = ("Add Product")
+    Picture = Picture["icon:/32/add"]
+    { barcodeBox TextBox
+      MoveScaled(11,1,46.4286,5)
+    }
+    { Label1 Label
+      MoveScaled(1,1,10,5)
+      Text = ("Barcode:")
+    }
+    { descriptionBox TextBox
+      MoveScaled(11,12.4286,46.4286,5)
+    }
+    { Button1 Button
+      MoveScaled(95,63,13,5)
+      Text = ("Submit")
+      Picture = Picture["icon:/32/apply"]
+    }
+    { Label3 Label
+      MoveScaled(1,12.4286,10,5)
+      Text = ("Description:")
+    }
+    { Label2 Label
+      MoveScaled(1,7,10,5)
+      Text = ("Name:")
+    }
+    { nameBox TextBox
+      MoveScaled(11,6.7143,46.4286,5)
+    }
+    { categoryBox TextBox
+      MoveScaled(11,18.1429,46.4286,5)
+    }
+    { Label4 Label
+      MoveScaled(1,18.1429,10,5)
+      Text = ("Category:")
+    }
+    { Label5 Label
+      MoveScaled(1,24,10,5)
+      Text = ("Quantity:")
+    }
+    { quantityBox TextBox
+      MoveScaled(11,23.8571,46.4286,5)
+    }
+    { Label6 Label
+      MoveScaled(1,29.5714,10,5)
+      Text = ("Notes:")
+    }
+    { noteBox TextArea
+      MoveScaled(11,29.5714,97,32)
+    }
+    { PictureBox1 PictureBox
+      MoveScaled(58,7.7143,51,15)
+      Picture = Picture["image002.jpg"]
+      Stretch = True
+      AutoResize = True
+    }
+    Index = 1
+    Text = ("Search")
+    Picture = Picture["icon:/64/find"]
+    Index = 2
+    Text = ("Totals")
+    Picture = Picture["icon:/64/edit"]
+    Index = 3
+    Text = ("Order Tracking")
+    Picture = Picture["icon:/64/package"]
+    Index = 0
+  }
+}

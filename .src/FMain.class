@@ -1,0 +1,44 @@
+' Gambas class file
+
+' allocate object for database connection (enable datacon).
+Public datacon As New Connection
+
+
+
+
+Public Sub Form_Open() ' When form opens this event is triggered running the code below.
+  With datacon ' Using datacon constantly.
+    .Type = "sqlite3" ' Set database type.
+    .Name = Application.Path & "/StockyBase" ' set database file path.
+  End With
+  
+  datacon.Open() ' Open database to program.
+  
+End
+
+Public Sub Button1_Click() ' When "Submit" button is clicked run the code below
+
+  Dim data As Result ' Allocates an area for the program to write in the database.
+  data = datacon.Create("products") ' Creates new blank table of products.
+  data!description = descriptionBox.Text ' Adds description to product table
+  data!barcode = Val(barcodeBox.Text) ' Adds barcode to product table
+  data!name = nameBox.Text
+  data!category = categoryBox.Text
+  data!quantity = Val(quantityBox.Text)
+  data!notes = noteBox.Text
+  ' add details
+  data.Update
+  datacon.Commit
+  
+  Message.Info("Product Inventoried", "OK")
+  descriptionBox.Text = ""
+  barcodeBox.Text = ""
+  nameBox.Text = ""
+  categoryBox.Text = ""
+  quantityBox.Text = ""
+  noteBox.Text = ""
+  
+  Catch
+    Message.Error("Problem adding Information to Database", "Dismiss")
+    
+End

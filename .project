@@ -1,0 +1,22 @@
+# Gambas Project File 3.0
+# Compiled with Gambas 3.8.4
+Title=Stocky
+Startup=FMain
+Version=0.0.3
+Component=gb.image
+Component=gb.gui
+Component=gb.form
+Component=gb.db
+Component=gb.db.sqlite3
+TabSize=2
+Language=en_US
+SourcePath=/home/mint/Desktop
+Maintainer=mint
+Vendor=AlexTech
+Address=mint@mint
+License=General Public License
+PackageName=stocky-0.0.3
+Packager=1
+Systems=ubuntu
+Menus=ubuntu:"Applications/Programming"
+Groups=ubuntu:"database"
