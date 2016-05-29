@@ -2,9 +2,12 @@
 
 Public Sub SetupGrid(grid As GridView)
 Grid.Columns.Count = 6
+Grid.Columns[0].Text = "Bar Code"
 grid.Columns[0].Width = 150
-Grid.Columns[1].Width = 50
-grid.Columns[2].Width = 50
+Grid.Columns[1].Text = "Description"
+Grid.Columns[1].Width = 350
+Grid.Columns[2].Text = "Enter Caption Here"
+grid.Columns[2].Width = 150
 
 End
 
@@ -17,6 +20,9 @@ Dim r As Integer
 
 For Each data 
   Grid[data.Index, 0].Text = Data!barcode
+  Grid[data.Index, 1].Text = Data!description
+  ' More Here
+  
 Next  
   
 End

@@ -13,7 +13,7 @@ Public Sub Form_Open() ' When form opens this event is triggered running the cod
   End With
   
   datacon.Open() ' Open database to program.
-  
+  Module.SetupGrid(GridView1)
 End
 
 Public Sub Button1_Click() ' When "Submit" button is clicked run the code below
@@ -41,4 +41,15 @@ Public Sub Button1_Click() ' When "Submit" button is clicked run the code below
   Catch
     Message.Error("Problem adding Information to Database", "Dismiss")
     
+End
+
+Public Sub TabStrip1_Click()
+
+  Dim Items As Result
+
+  If TabStrip1.Index = 1
+    Items = datacon.Find("products") 
+    Module.FillGrid(GridView1, Items)
+  Endif  
+
 End

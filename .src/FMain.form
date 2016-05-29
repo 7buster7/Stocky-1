@@ -65,6 +65,10 @@
     Index = 1
     Text = ("Search")
     Picture = Picture["icon:/64/find"]
+    { GridView1 GridView
+      MoveScaled(1,10,107,58)
+      Header = GridView.Horizontal
+    }
     Index = 2
     Text = ("Totals")
     Picture = Picture["icon:/64/edit"]
