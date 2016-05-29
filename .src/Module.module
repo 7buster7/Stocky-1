@@ -1,0 +1,22 @@
+' Gambas module file
+
+Public Sub SetupGrid(grid As GridView)
+Grid.Columns.Count = 6
+grid.Columns[0].Width = 150
+Grid.Columns[1].Width = 50
+grid.Columns[2].Width = 50
+
+End
+
+Public Sub FillGrid(Grid As GridView, Data As Result)
+  
+Dim r As Integer
+
+ 
+ Grid.Rows.Count = Data.Count
+
+For Each data 
+  Grid[data.Index, 0].Text = Data!barcode
+Next  
+  
+End
